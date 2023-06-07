@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon Form</title>
+</head>
+
+<body>
+    <h1>Race Registration!</h1>
+    <form action="/content">
+        <p>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" required>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required>
+        </p>
+        <p>
+        <p>Select a Race:</p>
+        <!-- important to add value to radio buttons which will be sent -->
+        <input type="radio" id="5k" name="Marathon" value="5k">
+        <label for="5k">Fun Run 5k</label>
+        <br>
+        <input type="radio" id="Half" name="Marathon" value="half">
+        <label for="Half">Half Marathon</label>
+        <br>
+        <input type="radio" id="Full" name="Marathon" value="full">
+        <label for="Full">Full Marathon</label>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+        </p>
+        <p>
+            <!-- value is sent -->
+            <label for="age">Select Age Group</label>
+            <select name="Select Age Group" id="age">
+                <option value="kids">under 18</option>
+                <option value="twenties">18-30</option>
+                <option value="adult">30-50</option>
+                <option value="senior">50+</option>
+            </select>
+        </p>
+        <p>
+            <button>Register!</button>
+        </p>
+
+
+
+
+    </form>
+</body>
+
+</html>

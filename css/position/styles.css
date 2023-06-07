@@ -1,0 +1,30 @@
+p {
+    width: 100px;
+    height: 100px;
+    background-color: olive;
+    display: inline-block;
+    margin: 20px;
+    border: 2px double black;
+}
+
+#two {
+    background-color: lime;
+}
+
+#static #two {
+    position: static;
+}
+
+#relative #two {
+    position: relative;
+    /* Now we can use top bottom left right */
+    /* and element is shifted RELATIVE to the normal position it would be in  */
+    top: 50px;
+    left: 50px;
+}
+
+#absolute #two {
+    position: absolute;
+    /* By writing till here, the second sqaure doesnt take any space so third takes its place and on top of it two is stacked so third is hidden */
+
+}

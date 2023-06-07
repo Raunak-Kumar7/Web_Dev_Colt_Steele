@@ -1,0 +1,42 @@
+h2 {
+    background-color: palegoldenrod;
+    border: 2px solid green;
+    display: inline;
+    /* Now it behaves like an inline element */
+    width: 300px;
+    /* width and height commands are ignored for inline elements */
+    margin: 50px;
+    /* Margin is respected ONLY HORIZONTALLY for inline elemnets */
+    padding: 20px;
+    /* But padding is respected for inline elements */
+    /* But this padding is actually not pushing away anything rather its overlapping */
+
+}
+
+span {
+    background-color: palegreen;
+    border: 2px solid green;
+    display: block;
+
+    /* Now it behaves like an block element */
+    width: 60px;
+    height: 40px;
+    margin: 60px;
+    padding: 100px;
+    /* For block level elements all width height padding and margin are respected */
+}
+
+div {
+    display: inline-block;
+    /* It is now an inline block */
+    width: 250px;
+    height: 150px;
+    background-color: violet;
+    border: 3px dotted blue;
+    margin: 30px;
+    padding: 50px;
+
+    /* Everything is respected */
+
+
+}

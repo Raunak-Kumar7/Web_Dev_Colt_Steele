@@ -10,7 +10,7 @@ Java Script is the **actions** that happen on our webpage
 
 Practicing Basic JS in Chrome Console:
 (here when you refresh code is gone)
-1. Cmd + Shift + J
+1. Cmd + Option + J
 2. Right click -> insepect -> console
 
 Pop Console Out
@@ -99,7 +99,7 @@ Variables
 
 var --> old way of declaring
 
-var variables can be **redeclared** and **reassigned**.
+var variables can be ```**redeclared** and **reassigned**```.
 ```
 var x = 5; // Declare a variable 'x' and assign a value of 5
 var y;    // Declare a variable 'y' without assigning a value
@@ -113,7 +113,7 @@ let age;          // Declare a variable 'age' without assigning a value
 ```
 
 
- const variables are block-scoped and **cannot be redeclared or reassigned** once they are defined. *However, for objects and arrays assigned to a const variable, their properties or elements can still be modified.*
+ const variables are block-scoped and **cannot be redeclared or reassigned** once they are defined. *However, for ```objects and arrays``` assigned to a const variable, their properties or elements can still be modified.*
 ```
 const PI = 3.14; // Declare a constant variable 'PI' and assign a value of 3.14
 const colors = ["red", "blue", "green"]; // Declare a constant variable 'colors' with an array
@@ -228,7 +228,7 @@ Variable Naming Rules & Convention:
 - Primitive data type
 
 - In JavaScript, a string is a sequence of characters enclosed in single quotes (''), double quotes ("") or backticks (``).
-## With back ticks`` we can give variables/expressions using ${}
+## ```With back ticks`` we can give variables/expressions using ${}```
 
 ```
 let message = 'Hello, world!';
@@ -328,6 +328,15 @@ const substr3 = str.substring(7, 12);
 console.log(substr3); // Output: "World"
 
 ```
+```Negative indices:```
+**substring does not support negative indices**. If you pass a negative value as either startIndex or endIndex, it will be treated as 0.
+slice supports negative indices. If you pass a negative value as either startIndex or endIndex, it will be counted from the end of the string. For example, slice(-3) will extract the last 3 characters of the string.
+
+```Handling of parameters:```
+If the startIndex is greater than the endIndex in substring, the method will swap the two parameters before extracting the substring.
+If the startIndex is greater than the endIndex in slice, the method will return an empty string.
+
+
 - String substr()
 - String replace()
 ```
@@ -408,7 +417,7 @@ repeatedStr; // Output: 'Hello!Hello!Hello!'
 
 
 -----------
-Chaining Of Functions/Methods
+## Chaining Of Functions/Methods
 ```
 let str = '   Hello, World!   ';
 
@@ -420,7 +429,7 @@ trimmedAndUpperCase
 -----------
 
 ## Template literals
-Can write any expression within it
+Can write any ```expression``` within it
 
 enclosed by backticks `  `
 ```
@@ -493,7 +502,7 @@ Q. Generate a random integer from 1 to 5
 ```
 Math.floor(Math.random()*5)+1
 ```
-Q. Generate a random integer from 20 - 23
+Q. ```Generate a random integer from 20 - 23```
 ```
 Math.floor(Math.random()*20)+3
 ```
@@ -634,7 +643,7 @@ console.log(true, 'Hello', [1, 2, 3], { name: 'John', age: 30 });
 ----------
  **alert** and **prompt** are built-in functions in JavaScript that allow you to interact with the user through dialog boxes in a web browser. Here's an explanation of each function:
 
-2. alert:
+2. ```alert```:
 
 - The alert function displays a simple message in an alert dialog box.
 - It is commonly used to show a notification or provide information to the user.
@@ -645,7 +654,7 @@ alert('Hello, world!');
 ```
 
 
-3. prompt
+3. ```prompt```
 
 prompt:
 
@@ -674,7 +683,7 @@ parseInt(userInput)
 
 ```
 
-4. parseInt
+4. ```parseInt```
 
 ```
 parseInt(string, radix);
@@ -1100,7 +1109,7 @@ console.log(array);
 
 9. join() 
 
-The join() function is used to **concatenate all the elements of an array into a single string.** By default, it joins the elements using a comma (,), but you can specify a custom separator as an argument.
+The join() function is used to **concatenate all the elements of an array into a single ```string```.** By default, it joins the elements using a comma (,), but you can specify a custom separator as an argument.
 
 ```
 let array = ['apple', 'banana', 'orange'];
@@ -1224,7 +1233,7 @@ array
 
 12. sort()
 (can have mixed arrays so it does not make sense directly)
-Sorts the function Based on Utf Code not logically
+```Sorts the function Based on Utf Code not logically```
 ```
 let scores = [1,70,100,2500,9,-12,0,34];
 //undefined
@@ -1238,7 +1247,7 @@ scores.sort();
 
 They dont compare if they same values stored in the array
 
-they compare if both the arrays point to the same memory location or not
+they compare if both the arrays ```point to the same memory location or not```
 
 ```
 let array1 = [1, 2, 3];
@@ -1375,7 +1384,7 @@ console.log(person.address.street);  // Output: "123 Main St"
 ```
 
 
-## Every Key is converted to **strings** (except Symbols)
+## Every ```Key``` is converted to **strings** (except Symbols)
 
 ```
 const years = {1999: 'Good', 2020: 'Bad', true: 'gd'}
@@ -1423,7 +1432,7 @@ console.log(person["city"]);  // Output: "New York"
 
 - Benefit of Square bracket notations
 
-1. We can put expressions inside the square bracket
+1. ```We can put expressions inside the square bracket```
 
 ```
 let person = {
@@ -1436,7 +1445,7 @@ console.log(person['first'+'name'])
 //output : "John"
 ```
 
-2. We can use variables to access 
+2. We ```can use variables to access ```
 
 ```
 const years = {1999: 'Good', 2020: 'Bad'}
@@ -1604,9 +1613,9 @@ console.log("Loop ended.");
 # Guessing Number Game
 -----------
 
-## For of Loop
+## `For of` Loop
 
-Can work on any iterable in Js such as array, string,  Maps (objects are not directly iterable)
+Can work on `any iterable in Js such as array, string,  Maps` (objects are not directly iterable)
 ```
 for (variable of iterable) {
   // Code to be executed for each element
@@ -1641,9 +1650,9 @@ for(let row of seatingChart)
 
 
 
-## For In Loop 
+## `For In` Loop 
 
-- For iterating over objects
+- For iterating over ````````
 
 ```
 testScores = {
@@ -1791,7 +1800,7 @@ exampleFunction();
 
 ```
 
-## In JavaScript, the ***var*** keyword does not have block scope like let and const. Instead, var has function scope or global scope. This means that variables declared with var are accessible throughout the entire function in which they are declared, regardless of block boundaries. 
+## In JavaScript, the ***var*** keyword does not have block scope like let and const. Instead, ```var has function scope or global scope.``` This means that variables declared with var are accessible throughout the entire function in which they are declared, regardless of block boundaries. 
 
 
 ```
@@ -1816,7 +1825,7 @@ exampleFunction();
 
 Lexical scope, also known as static scope, is a concept in programming that determines how variable names are resolved at compile time based on their location in the source code.
 
-###  nested functions.
+###  `nested functions.`
 ```
 function outerFunction() {
   let outerVariable = "Outer";
@@ -1838,7 +1847,7 @@ outerFunction();
 
 ## Function Expressions
 
-- A function expression in JavaScript is a way to define a function by **assigning it to a variable**. It allows functions to be **treated as values** that can be ***assigned, passed as arguments to other functions, or returned from other functions.***
+- A function expression in JavaScript is a way to define a function by **`assigning it to a variable`**. It allows functions to be **treated as values** that can be ***assigned, `passed as arguments to other functions, or returned from other functions`.***
 
 ```
 const greeting = function(name) 
@@ -1854,7 +1863,7 @@ greeting("John"); // Output: Hello, John!
 
 
 
-## Higher Order Functions
+# Higher Order Functions
 
 ### Pass Function As Arguments
 
@@ -1915,7 +1924,7 @@ console.log(isSenior(33));  //false
 
 ## Method in JS
 
-Every Method is A function but Vice versa not true
+`Every Method is A function but Vice versa not true`
 
 **Methods Are functions that are added as properties to Objects** 
 
@@ -2019,3 +2028,825 @@ function sumNumbers(a, b) {
 console.log(sumNumbers(5, 10)); // Output: 15
 console.log(sumNumbers(5, "10")); // Output: TypeError: Both parameters must be numbers
 ```
+
+
+
+# Array Callback Methods
+
+These Method require passing of Functions as Arguments(like higher Order Functions)
+
+## 1. `For Each Method`
+
+The forEach method in JavaScript is used to iterate over elements in an array and perform a specified operation for each element. **It takes a callback function as an argument and executes that function for each element in the array.**
+(not used very often after forOf)
+
+We generally use inline functions 
+eg. to print numbers using forEach
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(number) {
+  console.log(number);
+});
+```
+
+```
+const movies = [
+    {
+        title: 'Amadeus',
+        score: 99
+    },
+    {
+        title: 'Stand By me',
+        score: 85
+    },
+    {
+        title: 'Parasite',
+        score: 95
+    },
+    {
+        title: 'Alien',
+        score: 90
+    }
+];
+
+movies.forEach(function(movie)
+{
+    console.log(`${movie.title} : ${movie.score}/100`);
+});
+
+//Here we are writing an inline function for the array of object called movies
+// here movie is one instance of movies like(movie in movies)
+```
+
+
+## 2. `Map Function`
+
+- `Similar to For Each except that it returns an array of what it applies to each element in the array. `
+
+The map function in JavaScript is used to iterate over elements in an array and create a new array based on the transformation or manipulation of each element. It takes a callback function as an argument and returns a new array containing the results of applying the callback function to each element of the original array. 
+
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+const doubledNumbers = numbers.map(function(number) {
+  return number * 2;   //here we are returning a single element for each element in numbers 
+  so output is a new array
+});
+
+console.log(doubledNumbers);
+
+
+//[2, 4, 6, 8, 10]
+```
+
+Want Only Movie Names
+```
+const movies = [
+    {
+        title: 'Amadeus',
+        score: 99
+    },
+    {
+        title: 'Stand By me',
+        score: 85
+    },
+    {
+        title: 'Parasite',
+        score: 95
+    },
+    {
+        title: 'Alien',
+        score: 90
+    }
+];
+
+const movieNames = movies.map(function(movie)
+{
+    return movie.title;
+});
+
+console.log(movieNames);
+
+//movieNames
+// (4) ['Amadeus', 'Stand By me', 'Parasite', 'Alien']
+```
+
+```
+
+
+const movieNames = movies.map(function(movie)
+{
+    return movie.title.toUpperCase();
+});
+
+console.log(movieNames);
+
+///(4) ['AMADEUS', 'STAND BY ME', 'PARASITE', 'ALIEN']
+
+```
+
+## 3. Arrow Functions
+
+Arrow functions, also known as fat arrow functions, are a concise syntax for writing functions in JavaScript.
+
+```
+// Arrow function with single parameter
+const square = (num) => {
+    return num * num;
+}
+
+//For single parameters () are optional
+const square = num => {
+    return num * num;
+}
+
+//We need to create () even if 0 parameters
+// Arrow function without parameters
+const greet = () => {
+  console.log("Hello!");
+};
+
+// Arrow function with multiple parameters and multiple statements
+const multiply = (a, b) => {
+  let result = a * b;
+  return result;
+};
+```
+
+## Implicit Function Syntax Works only if there is SINGLE statement in the function
+
+- Example of Implicit returns
+
+```
+//Normal Function
+const isEven = function(num){
+    return num%2 === 0;
+};
+
+//General Arrow Funciton
+const isEven = (num) => {
+    return num%2 === 0; 
+};
+
+//Single Parameter with no ()
+const isEven = num => {
+    return num%2 === 0; 
+};
+
+////Implicit Return
+//1. Paranthesis instead of {} 
+//2. No ;
+const isEven = num => (
+    num%2 === 0
+)
+
+//One Liner implicit
+const isEven = num => num%2 === 0;
+
+```
+
+
+```
+//Using the arrow function on movies array to give rating out of 10
+
+const newMovies = movies.map(function(movie) =>{
+    return `${movie.title} - ${movie.score/10}`;
+});
+
+```
+
+
+//Implicit Return
+
+```
+const newMovies = movies.map(movie =>(
+`${movie.title} - ${movie.score/10}`
+))
+``` 
+
+
+Following 2 are not array methods
+
+But are used to casue delay in execution
+
+
+
+# SECTION 23
+(NEWER JS FEATURES)
+
+## DEFAULT PARAMS
+
+```
+function greet(name = 'Anonymous', message = 'Hello') {
+  console.log(`${message}, ${name}!`);
+}
+
+// Calling the function without arguments
+greet(); // Output: Hello, Anonymous!
+
+// Calling the function with arguments
+greet('John'); // Output: Hello, John!
+greet('Emily', 'Hi'); // Output: Hi, Emily!
+```
+### Make Sure to have arguments with default parameters to be at the last of parameters list
+
+
+
+## Spread in Function Calls
+
+```
+Math.max(13,4,5,3,34,345,2,11,34,9)
+345
+const nums = [3,4,5,3,34,345,2,11,34,9];
+undefined
+Math.max(nums)
+NaN
+Math.max(...nums)
+345
+```
+
+```
+console.log(nums)
+[3, 4, 5, 3, 34, 345, 2, 11, 34, 9]
+undefined
+console.log(...nums)
+3 4 5 3 34 345 2 11 34 9
+```
+
+
+```
+console.log('hello')
+hello
+undefined
+console.log(...'hello')
+h e l l o
+undefined
+console.log('h','e','l','l','o')
+h e l l o
+```
+
+## Spreads in Arrays/Strings  
+
+- It always creates new arrays
+```
+const cats = ['Blue','Scout', 'Rocket'];
+undefined
+const dogs = ['Rusty', 'Wyatt'];
+undefined
+const allPers = [...cats,...dogs]
+undefined
+allPers
+(5) ['Blue', 'Scout', 'Rocket', 'Rusty', 'Wyatt']
+[1,2,...cats,'Sppeddy',...dogs]
+(8) [1, 2, 'Blue', 'Scout', 'Rocket', 'Sppeddy', 'Rusty', 'Wyatt']
+```
+
+```
+['hello']
+ ['hello']
+[...'hello']
+ ['h', 'e', 'l', 'l', 'o']
+```
+
+## Spreads in Objects
+1. Can be used to add newer properties But A new Obejct is created
+```
+const feline = {legs:4, family:'Felidae'};
+undefined
+
+const canine = {isFurry:true, family:'Caninae'};
+undefined
+
+{...feline, color:'blue'};
+{legs: 4, family: 'Felidae', color: 'blue'}
+
+```
+
+2. Merge 2 objects into a newer Object
+- If the objects have common properties then last objects having that property will be finally overwritten
+```
+const catdogs = {...feline,...canine};
+undefined
+catdogs
+{legs: 4, family: 'Caninae', isFurry: true}
+
+
+
+const catdogs = {...feline,...canine, family:'happy'};
+undefined
+catdogs
+{legs: 4, family: 'happy', isFurry: true}
+
+
+```
+
+- Spreading Arrays to objects
+
+(indices are used as keys)
+```
+{...[1,4,2,5]};
+{0: 1, 1: 4, 2: 2, 3: 5}
+```
+- Spreading Strings to Objects
+
+```
+{...'hello'};
+{0: 'h', 1: 'e', 2: 'l', 3: 'l', 4: 'o'}
+```
+
+### We use this to basically add newer properties to objects if we want
+
+
+## Rest Params
+- different concept from spread
+- ...
+- Rest parameters allow us to pass an arbitrary number of arguments to a function as an array.  
+
+### Earlier (arguments object)
+
+```
+function sum() {
+  let total = 0;
+  for (let number of arguments) {
+    total += number;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3)); // Output: 6
+```
+- Here we could only access elements with indices but not apply any array function
+
+```
+function sum(...numbers) {
+  return nums.reduce((total,el) => total + el)
+}
+
+console.log(sum(1, 2, 3)); // Output: 6
+console.log(sum(4, 5, 6, 7, 8)); // Output: 30
+```
+- In this obviously we could write just like first method but showing using functions
+
+- The rest parameter numbers is represented as an array inside the function, containing all the arguments passed.
+
+- We can treat it as array 
+
+
+```
+function printNames(gold, silver, ...rest) {
+  console.log("Gold:", gold);
+  console.log("Silver:", silver);
+  console.log("Rest:", rest);
+}
+
+printNames("John", "Alice", "Bob", "Emily");
+```
+```
+Gold: John
+Silver: Alice
+Rest: [ 'Bob', 'Emily' ]
+```
+
+## but this is not available inside of arrow functions
+
+# Desructutring 
+- Done to extarct values from array, objects, params
+## Destructing an Array
+- For Arrays Order matters here
+```
+const integers = [1, 2, 3, 4, 5];
+const [first, second, ...restIntegers] = integers;
+
+console.log("First Integer:", first);
+console.log("Second Integer:", second);
+console.log("Rest of Integers:", restIntegers);
+
+/////
+First Integer: 1
+Second Integer: 2
+Rest of Integers: [3, 4, 5]
+```
+
+
+```
+const names = ["gold", "silver", "bronze", "platinum", "copper"];
+const [gold, ...rest] = names;
+
+console.log("Gold:", gold);
+console.log("Rest of Names:", rest);
+
+/////
+Gold: gold
+Rest of Names: ["silver", "bronze", "platinum", "copper"]
+```
+
+## Destructuring an Object
+- Order does not matter here, bcz we take by name of property
+```
+// Creating a user object
+const user = {
+  name: 'John Doe',
+  age: 30,
+  email: 'johndoe@example.com',
+  username: 'johndoe',
+  location: 'New York',
+  isAdmin: false
+};
+
+// Object destructuring to extract properties
+const { name, age, email, ...rest } = user;
+
+// Printing the extracted properties
+console.log('Name:', name);
+console.log('Age:', age);
+console.log('Email:', email);
+console.log('Rest of Properties:', rest);
+/////////
+Name: John Doe
+Age: 30
+Email: johndoe@example.com
+Rest of Properties: { username: 'johndoe', location: 'New York', isAdmin: false }
+
+```
+
+- We can also rename the variables
+- **But once we rename we can not use name, now we have to use fullName only**
+
+```
+// Creating a user object
+const user = {
+  name: 'John Doe',
+  age: 30,
+  email: 'johndoe@example.com',
+  username: 'johndoe',
+  location: 'New York',
+  isAdmin: false
+};
+
+// Object destructuring with property renaming
+const { name: fullName, age, email: userEmail, ...rest } = user;
+
+// Printing the extracted properties with renamed variables
+console.log('Full Name:', fullName);
+console.log('Age:', age);
+console.log('Email:', userEmail);
+console.log('Rest of Properties:', rest);
+
+
+/////
+Full Name: John Doe
+Age: 30
+Email: johndoe@example.com
+Rest of Properties: { username: 'johndoe', location: 'New York', isAdmin: false }
+
+```
+
+- We can also assign default values if the property does not exist in the object
+```
+const user = {
+  name: 'John',
+  age: 30,
+};
+
+const { name, age, gender = 'Unknown' } = user;
+
+console.log(name); // Output: John
+console.log(age); // Output: 30
+console.log(gender); // Output: Unknown
+```
+
+## Deconstructing Params
+# ```Complete```
+
+
+
+# DOM(Document Object Model)
+
+- Javasript Objects that represent a website
+- Basically connecting html+css+js
+-  the DOM is a representation of the web page that allows JavaScript (and other programming languages) to interact with the elements on the page. It provides a set of objects, properties, and methods that can be used to manipulate and dynamically update the content and behavior of a web page.
+- The DOM tree consists of nodes, where each node represents an element, attribute, or text within the document. Nodes can be accessed, modified, or removed using JavaScript or other scripting languages.
+
+- Each element in html/ css is assigned to be CONNECTED js object(Tree Structure) with some properties
+
+![dom](pictures/dom.png)
+
+
+- DOCUMENT object is our entry point to DOM(root of tree)
+
+
+### Following along in silkie chickens file(in dom folder)
+
+to see whats dom run 
+
+- To see a js object on chrome console
+
+```console.dir(document)```
+- all tags are objectes with various properties
+ 
+
+## Select elements/Objects
+- various method
+
+1. getElementById
+- run in console
+```
+const banner = document.getElementById('banner');
+```
+
+
+```
+<head>
+    <title>Get Element By ID Example</title>
+</head>
+<body>
+    <h1 id="myHeading">Hello, World!</h1>
+
+    <script>
+        // Access the element with id "myHeading"
+        var heading = document.getElementById("myHeading");
+
+        // Modify the content of the element
+        heading.textContent = "Welcome to my website!";
+    </script>
+</body>
+```
+
+2. getElementsByTagName 
+- is a method in JavaScript that is used to access multiple HTML elements on a web page based on their tag name. It is part of the Document Object
+
+
+- which becomes/returns an HTML collection(like an array BUT not an array) (NodeList) containing all the selected elements. We can then loop through this NodeList and modify 
+
+- we have **length**
+- We can use **for of, indices** as they are iterable but not arrays
+
+- 
+[Run here](https://codebeautify.org/htmlviewer)
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Elements By Tag Name Example</title>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <script>
+        // Access all <p> elements on the page
+        var paragraphs = document.getElementsByTagName("p");
+
+        // Loop through the elements and modify their content
+        for (var i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].textContent = "Updated paragraph " + (i + 1);
+        }
+    </script>
+</body>
+</html>
+``` 
+- Manipulating using dom
+
+
+3. getElementsByClassName
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Elements By Class Name Example</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        .special {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+
+    <p class="highlight">This paragraph has the "highlight" class.</p>
+    <p class="highlight">This paragraph also has the "highlight" class.</p>
+    <p>This paragraph does not have any class.</p>
+    <p class="special">This paragraph has the "special" class.</p>
+
+    <script>
+        // Access all elements with the "highlight" class
+        var highlightElements = document.getElementsByClassName("highlight");
+
+        // Loop through the highlight elements and modify their style
+        for (var i = 0; i < highlightElements.length; i++) {
+            highlightElements[i].style.backgroundColor = "yellow";
+        }
+
+        // Access the element with the "special" class
+        var specialElement = document.getElementsByClassName("special")[0];
+        specialElement.style.fontSize = "24px";
+    </script>
+</body>
+</html>
+```
+
+4. querySelector()
+- All in One
+- gives First Match only by default
+- can combine multiple selectors
+
+1. Selecting an element by its tag name:
+```
+const element = document.querySelector("div");
+```
+
+2. Selecting an element by its ID:
+
+```
+const element = document.querySelector("#myElement");
+```
+
+3. Selecting an element by its class:
+
+```
+const element = document.querySelector(".myClass");
+```
+
+4. Selecting an element by its attribute:
+
+```
+const element = document.querySelector("[data-id='123']");
+```
+
+### - Combination of tag and attribute
+```
+const element = document.querySelector("input[type='text']");
+```
+
+### Not So important rn
+5. Selecting an element with a specific attribute prefix:
+```
+const element = document.querySelector("[class^='btn-']");
+```
+
+6. Selecting an element with a specific attribute suffix:
+```
+const element = document.querySelector("[src$='.png']");
+```
+
+7. Selecting an element with an attribute containing a specific value:
+```
+const element = document.querySelector("[class*='active']");
+```
+8. Selecting an element with an attribute value that starts with a specific substring:
+```
+const element = document.querySelector("[href|='https://']");
+```
+
+------
+## querySelectorAll()
+
+### It returns iterable html collection
+- same concept as querySelector just gives all the selected
+eg. 
+```
+const paragraphs = document.querySelectorAll("p");
+```
+
+```
+const fruits = document.querySelectorAll("[data-category='fruit']");
+```
+
+```
+const checkboxes = document.querySelectorAll("form input[type='checkbox']");
+```
+
+eg. of anchor tags **inside** p tag
+- Descendent Selector -> p a 
+```
+const paragraphs = document.querySelectorAll("p a");
+```
+
+- _Some_ Important **properties**
+
+![prop](pictures/prop.png)
+
+1. innerText 
+```
+const heading = document.getElementById("myHeading");
+const text = heading.innerText;
+console.log(text);
+```
+
+updating
+```
+const paragraph = document.querySelector("p");
+paragraph.innerText = "New text content";
+
+
+//Concatenating
+const paragraph = document.querySelector("p");
+paragraph.innerText += " More text";
+
+2. textContent
+
+```
+const paragraph = document.getElementById("myParagraph");
+const text = paragraph.textContent;
+console.log(text);
+```
+
+```
+const paragraph = document.querySelector("p");
+paragraph.textContent += " More text";
+```
+
+```
+<div id="myDiv">
+  <h2>Hello <span>World</span></h2>
+</div>
+const div = document.getElementById("myDiv");
+const text = div.textContent; // Retrieves the text: "Hello World"
+div.textContent = "New text"; // Updates the text: "New text"
+```
+
+
+  3. innerHTML
+
+  - The innerHTML property is used to get or set the HTML content within an element. It represents the markup contained within an element, including any HTML tags and their attributes.
+
+- can modify the html file by also adding/modifying tags
+
+
+[innerText vs textContent vs innerHtml](https://www.microfocus.com/documentation/silk-test/200/en/silktestworkbench-help-en/SILKTEST-21EEFF3F-DIFFERENCEBETWEENTEXTCONTENTSINNERTEXTINNERHTML-REF.html)
+
+
+------------
+
+Now working with attributes
+
+eg. theres an image in html
+eg. we can change its id
+```
+document.querySelector('#banner').id = 'whoops'
+```
+we can view attributes 
+```
+document.querySelector('a').href;
+document.querySelector('a').title
+```
+
+
+We can also use methods to get set remove attributes
+
+1. Accessing an attribute:
+```
+const link = document.getElementById("myLink");
+const hrefValue = link.getAttribute("href");
+console.log(hrefValue);
+```
+2. Modifying an attribute:
+```
+const image = document.querySelector("img");
+image.setAttribute("src", "new-image.jpg");
+```
+3. Removing an attribute:
+```
+const input = document.getElementById("myInput");
+input.removeAttribute("disabled");
+```
+4. Checking if an element has a specific attribute:
+```
+const button = document.querySelector("button");
+const hasDisabledAttr = button.hasAttribute("disabled");
+console.log(hasDisabledAttr); // true or false
+```
+
+
+
+
+
+
+
+------------
+------------
+------------
+# Basics Of Terminal Commands
+
+Shell is basically a Software that runs on the Terminal.
+EG. OF SHELL , Bash, zsh(default in mac)
+
+~ means in home
+1. ls
+2. pwd
+3. cd ..   --> one level up
+4. cd dirName ---> from any directory to any directory
+5. cd /  --> root directory
+6. cd ~ --> home directory
+
+

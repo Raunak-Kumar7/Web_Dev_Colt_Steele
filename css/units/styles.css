@@ -1,0 +1,30 @@
+section {
+    width: 800px;
+    height: 600px;
+    background-color: yellowgreen;
+    font-size: 50px;
+}
+
+div {
+    width: 50%;
+    height: 50%;
+    background-color: pink;
+
+}
+
+h1 {
+    font-size: 40px;
+    border: 1px solid black;
+    line-height: 200%;
+    /* it is of 200% of font-size */
+}
+
+p {
+    font-size: 2em;
+}
+
+h2 {
+    /* by default header size is taken  */
+    /* So margin left is defualt h2 font size*3 */
+    margin-left: 3em;
+}
